@@ -45,6 +45,7 @@ gulp.task('sass', function(){
 
 gulp.task('browserSync', function() {
     browserSync.init({
+        browser: "firefox",
         server: {
             baseDir: 'public'
         }
