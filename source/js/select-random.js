@@ -17,10 +17,8 @@ function select_random() {
     selected.className = "badge-content";
 
     var rand_int = getRandomInt(0, 8)
-    var new_selected = elements[rand_int];
-    new_selected.className += " highlight";
-    console.log(elements.length); 
-    selected = new_selected;
+    selected = elements[rand_int];
+    selected.className = "badge-content highlight";
 };
 
 function getRandomInt(min, max) {
