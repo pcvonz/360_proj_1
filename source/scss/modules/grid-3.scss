@@ -13,7 +13,7 @@
 
 .grid-3 {
     @include breakpoint($tablet) {
-        @include gallery (4 of 12 0);
+        @include gallery (4 of 12 1/4);
     }
 }
 

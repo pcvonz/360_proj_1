@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css?family=Fira+Sans");
+a:visited {
+  color: gray; }
+
+hr {
+  margin: 0; }
+
+body {
+  background-color: #f6f6f6;
+  padding: 10;
+  color: #4a4a4a;
+  margin: 0;
+  padding: 0;
+  font-family: 'Fira Sans', sans-serif;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+  body:after {
+    content: " ";
+    display: block;
+    clear: both; }
+
+@media (min-width: 500px) {
+  :after {
+    content: " ";
+    display: block;
+    clear: both; }
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+
+nav {
+  background-color: white;
+  display: block;
+  width: 100%;
+  height: 2.2em;
+  margin: 0;
+  padding: 1.2em 0 1.2em 0; }
+  nav ul {
+    display: block;
+    width: 100%;
+    height: 2.2em;
+    margin: 0;
+    padding: 0; }
+
+footer {
+  float: right;
+  clear: both; }
+  footer .nav-item {
+    margin-right: 1.2em; }
+    footer .nav-item p {
+      line-height: 10px; }
+
+.square-list {
+  list-style-type: square;
+  text-align: left;
+  float: left;
+  line-height: 1.3em; }
+
+.about {
+  width: 40.67797%;
+  float: left;
+  margin-right: 1.69492%;
+  margin-left: 29.41176%; }
+
+.grid-3 {
+  width: 32.20339%;
+  float: left;
+  margin-right: 1.69492%;
+  height: 32.20339%; }
+
+.grid-3-last {
+  width: 32.20339%;
+  float: right;
+  margin-right: 0;
+  height: 32.20339%; }
+
+.profile-image {
+  margin: 0 auto;
+  background-image: url("../images/profile.png");
+  background-position: center center;
+  background-size: 10em;
+  border-radius: 100px;
+  height: 10em;
+  width: 10em; }
+
+.about {
+  text-align: center;
+  margin-bottom: 2.2em; }
+
+.nav-item {
+  float: left;
+  list-style: none;
+  padding: 6px;
+  text-transform: uppercase; }
+
+.selected a {
+  color: gray;
+  font-weight: 600; }
+
+.nav-item a {
+  text-decoration: none;
+  color: black; }
+
+.nav-item a:hover {
+  color: pink; }
+
+.anim-badge {
+  z-index: 100;
+  height: 200px; }
+
+.anim-badge:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  float: left;
+  z-index: -1;
+  background-image: url("../images/image_1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-origin: center center;
+  filter: opacity(80%) brightness(1);
+  transition: 2s filter; }
+
+.anim-badge:hover:before {
+  content: "";
+  filter: brightness(0); }
+
+.badge-content {
+  display: inline-block;
+  text-align: center;
+  padding: 0em .5em;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  bottom: 200px;
+  left: -14px;
+  color: black;
+  transition: color .2s; }
+
+.badge-content:hover {
+  color: white; }
+
+.name {
+  float: right;
+  color: #989898;
+  margin-right: .2em; }

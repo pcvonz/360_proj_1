@@ -13,6 +13,7 @@ hr {
        margin: 0;
        padding: 0;
        font-family: 'Fira Sans', sans-serif;
+       min-height: 600px;
    } 
 
 @include susy-breakpoint($tablet, $mobile-layout) {
@@ -34,8 +35,10 @@ nav {
     padding-left: 7%;
     @include container(4 center);
     background-color: pink;
+    padding: 1.2em 0 1.2 0;
     @include breakpoint($tablet) {
-        @include container(6);
+        @include container(6 left);
+        max-width: 50em;
         background-color: white;
     }
     ul {
