@@ -1,11 +1,10 @@
 .content {
-    @include container(4 95%);
+    @include container(4 100%);
 }
 
 
 @include breakpoint($tablet) {
     .content {
         @include container(auto 12 1/4 center 90%);
-        max-width: 70em;
     }
 }

@@ -7,7 +7,7 @@
 }
 
 #selected a {
-    color: #ce47a1;
+    color: $secondary-color;
     font-weight: 600;
 }
 
@@ -15,9 +15,9 @@
     text-decoration: none;
     color: white;
     @include breakpoint($tablet) {
-        color: black;
+        color: $primary-color;
     }
 }
 .nav-item a:hover {
-    color: pink;
+    color: $gray;
 }

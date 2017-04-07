@@ -1,41 +1,25 @@
 .anim-badge {
-    z-index: 100;
-    height: 200px;
-    margin-bottom: 1em;
-}   
-.anim-badge::before {
-    content: "";
-    width: 100%;
-    height: 100%; 
-    float: left;
-    z-index: -1;
-}   
-
-.anim-badge:hover::before {
-    content: "";
+  height: 100vh;
+  position: relative;
+  z-index: 0;
 }   
 
 .badge-content {
+    position: absolute;
+    bottom: 0;
     display: inline-block;
     text-align: center;
     width: 100%;
-    height: 100%;
-    position: relative;
-    bottom: 200px;
-    color: rgba(255, 255, 255, 0);
-    transition: color .2s;
-    background-color: rgba(219, 70, 180, .5);
-    transition: background-color 1s, color 1s;
+    background-color: transparentize($primary-color, .2);
+    color: white;
 }
 
 .highlight {
-    color: white;
-    background-color: rgba(219, 70, 180, .8);
+    background-color: $primary-color;
 }
 
 .badge-content:hover {
     color: white;
-    background-color: rgba(219, 70, 180, .8);
 }
 
 .anim-badge:hover {

@@ -9,6 +9,7 @@
 @import "scss/layouts/list.scss";
 @import "scss/layouts/about.scss";
 @import "scss/layouts/l-content.scss";
+@import "scss/layouts/nav.scss";
 
 //modules
 @import "scss/modules/grid-3.scss";
@@ -21,10 +22,3 @@
 
 //states
 @import "scss/states/is-expanded-vertical-dropdown.scss";
-
-.name {
-    float: right;
-    color: #989898;
-    margin-right: .2em;
-}
-
