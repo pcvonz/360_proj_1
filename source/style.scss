@@ -3,6 +3,9 @@
 @import "breakpoint";
 @import "scss/variables";
 
+//Abstracts
+@import "scss/abstracts/background_images.scss";
+
 //layouts
 @import "scss/layouts/body.scss";
 @import "scss/layouts/footer.scss";
