@@ -1,10 +1,13 @@
+//.content {
+//}
+//
+//
+//@include breakpoint($tablet) {
+//    .content {
+//        @include container(auto 12 1/4 center 90%);
+//    }
+//}
+
 .content {
-    @include container(4 100%);
-}
-
-
-@include breakpoint($tablet) {
-    .content {
-        @include container(auto 12 1/4 center 90%);
-    }
+  @include span(9 of 12 last);
 }

@@ -7,13 +7,16 @@
   }
   z-index: 0;
   .badge-content {
-    transition: right .5s;
+    transition: background-color .5s, color .5s;
   }
+  margin-bottom: 2em;
 }   
 
 .anim-badge:hover {
   .badge-content {
-    right: 0%;
+    background-color: transparentize($primary-color, .2);
+    color: white;
+
   }
 }
 
@@ -21,11 +24,11 @@
     position: absolute;
     top: 0;
     width: 100%;
-    right: 100%;
     display: inline-block;
     text-align: center;
-    background-color: transparentize($primary-color, .2);
-    color: white;
+    background-color: transparentize($primary-color, 1);
+    color: transparentize($primary-color, 1);
+    height: 100%;
     h2 {
       font-size: 1.1em;
       text-transform: uppercase;
@@ -36,9 +39,3 @@
     background-color: $primary-color;
 }
 
-.badge-content:hover {
-    color: white;
-}
-
-.anim-badge:hover {
-}

@@ -1,0 +1,7 @@
+.sidebar {
+  @include span(3 of 12);
+  background-color: $secondary-color;
+  color: white;
+  height: 100%;
+  padding: 1em;
+}
