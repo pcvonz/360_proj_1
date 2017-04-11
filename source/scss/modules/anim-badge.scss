@@ -1,17 +1,35 @@
 .anim-badge {
-  height: 100vh;
+  height: 300px;
   position: relative;
+  overflow: hidden;
+  @include breakpoint($tablet) {
+    @include gallery(4 of 12);
+  }
   z-index: 0;
+  .badge-content {
+    transition: right .5s;
+  }
 }   
+
+.anim-badge:hover {
+  .badge-content {
+    right: 0%;
+  }
+}
 
 .badge-content {
     position: absolute;
-    bottom: 0;
+    top: 0;
+    width: 100%;
+    right: 100%;
     display: inline-block;
     text-align: center;
-    width: 100%;
     background-color: transparentize($primary-color, .2);
     color: white;
+    h2 {
+      font-size: 1.1em;
+      text-transform: uppercase;
+    }
 }
 
 .highlight {
