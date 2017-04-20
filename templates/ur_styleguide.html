@@ -1,10 +1,67 @@
 {% extends "layouts/content.html" %}
 
 {% block content %}
-<div class="content">
-  <h1> University Residences Styleguide </h1>
-  <h2> The brief </h2>
-  <h2> Research </h2>
-  <h2> Implementation </h2>
+<div class="l-work-content">
+  <h1 id="university-residences-website-interactive-style-guide">University Residences Website / Interactive Style guide</h1>
+  <h2 id="overview">Overview</h2>
+  <p>The University Residences website is used by current students, future students, and parents alike. It houses information on</p>
+  <ul>
+  <li><p>Residence Halls</p></li>
+  <li><p>Job opportunities</p></li>
+  <li><p>A variety of web applications for external and internal use (Housing application, applying for housing, meal plan balance, roommate match)</p></li>
+  </ul>
+  <h2 id="the-problems">The Problems</h2>
+  <h3 id="high-turnover">High Turnover</h3>
+  <p>ResTek has high turn over. All employees are students so they work for about four years before they graduate. The redesign has been a huge project for the web team. Work has started, stopped, scrapped, and started again multiple times.</p>
+  <h3 id="visual-cohesion">Visual Cohesion</h3>
+  <p>University Residences is a sub brand under Western Washington University. Currently, the website does not follow the current brand guidelines. Ideally, it would identify as a unique brand that fits under the umbrella of WWU.</p>
+  <h3 id="who-is-our-audience">Who is our audience?</h3>
+  <p>There are so many vectors and people to think about when designing for a university website. There are incoming students, first generation college students, international students, parents, and returning students.</p>
+  <h2 id="the-solutions">The solution(s)</h2>
+  <p>The problem is really two fold.</p>
+  <ul>
+  <li><p>Internally, how does this mostly student run organization keep the project momentum going?</p></li>
+  <li><p>Externally, how do we deliver a product which fulfills our myriad amount of users needs?</p></li>
+  </ul>
+  <h2 id="patternlab-an-interactive-styleguide">Patternlab: An Interactive Styleguide</h2>
+  <p>I took inspiration from <a href="http://atomicdesign.bradfrost.com/">Brad Frost's</a> book Atomic Design and the design system: Patternlab. I built on top of this progam in order to serve the needs of our designers, developers, and stakeholders. Also considering that we build internal and external web applications that appear to be disparate creations, building a unified styleguide seems to be the best solution.</p>
+  <h3 id="designers">Designers</h3>
+  <p>An important part of the project is to make sure that designers can easily add their own styles to the project using all the tools they love (SASS, Susy, Breakpoint) and to make it easy for them to customize the workflow as web technologies continue to evolve.</p>
+  <h3 id="developers">Developers</h3>
+  <p>The styleguide needs to be a resource that is easy for developers to access so they can pull the latest skeleton code and minified CSS to hack a web app together quickly. Patternlab gives all of this to us for free.</p>
+  <h3 id="stakeholders">Stakeholders</h3>
+  <p>Finally, stakeholders need to feel that this styleguide represents their voice. I branded it according to the WWU brand guide. This involved ripping out the base styles that come bundled with patternlab and giving it the WWU brand treatment.</p>
+  <p><img src="images/case_study/one.png"/></p>
+  <h2 id="role">Role</h2>
+  <p>Visual designer and front end programmer. I put the fire under our teams heels to create the aforementioned interactive styleguide. This compartmentalized our problems from designing an entire website to designing the components of a website, ensuring that even after I graduate, the team will maintain the forward momentum we have gained. Work on the website is thought through the lens of <em>atoms, molecules, and organisms</em>. Remniscent of how CSS frameworks are constructed, such as Bootstrap. I started from patternlab-node and then extended the build script to include all the tools our team uses. I also created mockups, conducted research, and established a visual direction for the redesign.</p>
+  <h2 id="building-the-styleguide">Building The Styleguide</h2>
+  <h3 id="understanding-our-audience">Understanding our audience</h3>
+  <p>ResTek has access to a few old hats when it comes to University Housing. They have a deep understanding of the process and who applies. Consulting them and learning from them has been instrumental in establishing tone. We had our communication consultant mockup the landing page, giving us insight into what she believed to be the most important parts of the University Residences website.</p>
+  <h3 id="what-is-out-there-already">What is out there already?</h3>
+  <p>A lot of housing websites exist and our in a similar state to ours.</p>
+  <p>Considering competitor schools: WSU, UW, and Central. These schools all lack in a specific area.</p>
+  <p>UW visually does not fit with the university branding. The nav is focused generally on incoming students and important information (when students can apply) is hidden in a block of text.</p>
+  <p>WSU is the best put together website of the bunch. It hardly has any text, except for when the application is open. The bulk of the content is videos that are properly captioned.</p>
+  <p>Central’s website funnels people based on new students and current students. A lot of information is hidden behind a carousel, which not many people are going to take the time to watch. The side navigation has a lot of items, it takes a bit to get through all of them and half of them are hidden underneath a dropdown. The overall visual style isn’t cohesive.</p>
+  <div class="case-study">
+    <img src="images/case_study/comp_1.png" /><img src="images/case_study/comp_2.png" /><img src="images/case_study/comp_3.png" >
+  </div>
+  <h3 id="personas">Personas</h3>
+  <p>A fellow colleague in another department compiled a list of detailed personas. ResTek itself also created what are known as proto personas as an onboarding technique for current staff. We had them create a persona based on their experiences. This highlighted internal biases when it comes to designing applications for users and also established sympathy for our diverse perspectives.</p>
+  <h3 id="sitemap">Sitemap</h3>
+  <p>The current sitemap was established from an inward facing direction rather than from a users perspective. Utilizing the aforementioned research we conducted an open card sort to establish which pages to include and then a closed card sort to see if our orginization made sense.</p>
+  <h3 id="patternlab">Patternlab</h3>
+  <p>Starting with paper wireframes and a handful of atoms (base web components) we dove straight into creating more complex patterns in patternlab. They were than composed into layouts</p>
+  <p>Thinking about the smallest components and then composing them into larger patterns makes mocking up patterns using basic web technologies very quick. Also, since I collaborated with our server admins to serve our styleguide, we can show stakeholders our work and have them test it out too.</p>
+  <p><img src="images/case_study/image5.png" width="98" height="81" /> →<img src="images/case_study/image6.png" width="125" height="57" /> →<img src="images/case_study/image7.png" width="217" height="58" /></p>
+  <p><img src="media/image8.png" width="622" height="32" /></p>
+  <p>We identified a few layouts that are common on the University Residences website:</p>
+  <ul>
+  <li><p>Content pages, any sub page of the website that is mainly textual.</p></li>
+  <li><p>Tour pages, detailed pages that heavily rely on images. They give users information about WWU’s residence halls.</p></li>
+  <li><p>The landing page, a unique page that should push social media and tell visitors that our department is focused on fostering relationships between people.</p></li>
+  </ul>
+  <p>Here is an exmpale iteration of one of the content page layouts. The header image is a square grid of images, over time the squares fade to reveal the image underneath. The images are of students in the residence halls. Social media is the second item on the sight, emphasizing our goal to engage our users through social media.</p>
+  <p><img src="media/image9.png" width="622" height="434" /></p>
 </div>
 {% endblock %}

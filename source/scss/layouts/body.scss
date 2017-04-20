@@ -18,6 +18,9 @@ hr {
    min-height: 600px;
  } 
 
+.l-hero {
+  @include container(12 center 100%);
+}
 
 
 .main {

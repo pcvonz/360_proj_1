@@ -6,6 +6,7 @@
 //Abstracts
 @import "scss/abstracts/background_images.scss";
 @import "scss/abstracts/susy_presets.scss";
+@import "scss/abstracts/global.scss";
 
 //layouts
 @import "scss/layouts/body.scss";
@@ -15,6 +16,8 @@
 @import "scss/layouts/l-content.scss";
 @import "scss/layouts/nav.scss";
 @import "scss/layouts/sidebar.scss";
+@import "scss/layouts/l-hero.scss";
+@import "scss/layouts/l-work-content.scss";
 
 //modules
 @import "scss/modules/profile-image.scss";
