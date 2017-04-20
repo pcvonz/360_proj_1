@@ -4,6 +4,7 @@ nav {
     top: 0;
     background-color: $primary-color;
     display: block;
+    text-align: center;
     width: 100%;
     height: 100vh;
     margin: 0;
@@ -16,21 +17,22 @@ nav {
     @include breakpoint($tablet) {
         background-color: #FFFFFFE6;
         @include container(6 left);
+        text-align: left;
     }
     ul {
       li {
+        font-size: 1.2em;
         width: 100%;
         @include breakpoint($tablet) {
           width: unset;
+          margin-left: 1em;
         }
-        margin: 0 .5em;
         
       }
         display: block;
         width: 100%;
         height: 2.2em;
-        margin: 0;
+        margin-top: 1.2em;
         padding: 0;
-        margin-left: 1em;
     }
 }

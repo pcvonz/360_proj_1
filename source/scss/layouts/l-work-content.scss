@@ -1,0 +1,39 @@
+.l-work-content {
+  
+  margin-top: 2em;
+  @include container(12 center 90%);
+  @include breakpoint($tablet) {
+    @include container(12 center 80%);
+  }
+  @include breakpoint($desktop) {
+    @include container(12 center 60%);
+  }
+  img {
+    width: 100%;
+  }
+  #atoms {
+    @include span(12 of 12);
+    img:first-child{
+      width: 80px;
+    }
+    img {
+      width: 220px;
+    }
+  }
+  .case-study {
+    @include span(12 of 12);
+    img {
+      @include gallery(4 of 12);
+    }
+  }
+  .clients {
+    margin: 2em 0;
+    background-color: $secondary-color;;
+    color: white;
+    @include span(12 of 12);
+    div {
+    padding: 2em;
+      @include gallery(4 of 12);
+    }
+  }
+}

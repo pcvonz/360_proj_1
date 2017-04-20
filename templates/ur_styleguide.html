@@ -1,6 +1,8 @@
 {% extends "layouts/content.html" %}
 
 {% block content %}
+<div class="work-hero ur-styleguide">
+</div>
 <div class="l-work-content">
   <h1 id="university-residences-website-interactive-style-guide">University Residences Website / Interactive Style guide</h1>
   <h2 id="overview">Overview</h2>
@@ -25,12 +27,20 @@
   </ul>
   <h2 id="patternlab-an-interactive-styleguide">Patternlab: An Interactive Styleguide</h2>
   <p>I took inspiration from <a href="http://atomicdesign.bradfrost.com/">Brad Frost's</a> book Atomic Design and the design system: Patternlab. I built on top of this progam in order to serve the needs of our designers, developers, and stakeholders. Also considering that we build internal and external web applications that appear to be disparate creations, building a unified styleguide seems to be the best solution.</p>
-  <h3 id="designers">Designers</h3>
-  <p>An important part of the project is to make sure that designers can easily add their own styles to the project using all the tools they love (SASS, Susy, Breakpoint) and to make it easy for them to customize the workflow as web technologies continue to evolve.</p>
-  <h3 id="developers">Developers</h3>
-  <p>The styleguide needs to be a resource that is easy for developers to access so they can pull the latest skeleton code and minified CSS to hack a web app together quickly. Patternlab gives all of this to us for free.</p>
-  <h3 id="stakeholders">Stakeholders</h3>
-  <p>Finally, stakeholders need to feel that this styleguide represents their voice. I branded it according to the WWU brand guide. This involved ripping out the base styles that come bundled with patternlab and giving it the WWU brand treatment.</p>
+  <div class="clients">
+    <div class="card">
+      <h3 id="designers">Designers</h3>
+      <p>An important part of the project is to make sure that designers can easily add their own styles to the project using all the tools they love (SASS, Susy, Breakpoint) and to make it easy for them to customize the workflow as web technologies continue to evolve.</p>
+    </div>
+    <div class="card">
+      <h3 id="developers">Developers</h3>
+      <p>The styleguide needs to be a resource that is easy for developers to access so they can pull the latest skeleton code and minified CSS to hack a web app together quickly. Patternlab gives all of this to us for free.</p>
+    </div>
+    <div class="card">
+      <h3 id="stakeholders">Stakeholders</h3>
+      <p>Finally, stakeholders need to feel that this styleguide represents their voice. I branded it according to the WWU brand guide. This involved ripping out the base styles that come bundled with patternlab and giving it the WWU brand treatment.</p>
+    </div>
+  </div>
   <p><img src="images/case_study/one.png"/></p>
   <h2 id="role">Role</h2>
   <p>Visual designer and front end programmer. I put the fire under our teams heels to create the aforementioned interactive styleguide. This compartmentalized our problems from designing an entire website to designing the components of a website, ensuring that even after I graduate, the team will maintain the forward momentum we have gained. Work on the website is thought through the lens of <em>atoms, molecules, and organisms</em>. Remniscent of how CSS frameworks are constructed, such as Bootstrap. I started from patternlab-node and then extended the build script to include all the tools our team uses. I also created mockups, conducted research, and established a visual direction for the redesign.</p>
@@ -53,8 +63,10 @@
   <h3 id="patternlab">Patternlab</h3>
   <p>Starting with paper wireframes and a handful of atoms (base web components) we dove straight into creating more complex patterns in patternlab. They were than composed into layouts</p>
   <p>Thinking about the smallest components and then composing them into larger patterns makes mocking up patterns using basic web technologies very quick. Also, since I collaborated with our server admins to serve our styleguide, we can show stakeholders our work and have them test it out too.</p>
-  <p><img src="images/case_study/image5.png" width="98" height="81" /> →<img src="images/case_study/image6.png" width="125" height="57" /> →<img src="images/case_study/image7.png" width="217" height="58" /></p>
-  <p><img src="media/image8.png" width="622" height="32" /></p>
+  <div id="atoms">
+    <img src="images/case_study/three.png"/> →<img src="images/case_study/four.png" /> →<img src="images/case_study/five.png"/>
+  </div>
+    <img src="images/case_study/nav.png"/>
   <p>We identified a few layouts that are common on the University Residences website:</p>
   <ul>
   <li><p>Content pages, any sub page of the website that is mainly textual.</p></li>
@@ -62,6 +74,6 @@
   <li><p>The landing page, a unique page that should push social media and tell visitors that our department is focused on fostering relationships between people.</p></li>
   </ul>
   <p>Here is an exmpale iteration of one of the content page layouts. The header image is a square grid of images, over time the squares fade to reveal the image underneath. The images are of students in the residence halls. Social media is the second item on the sight, emphasizing our goal to engage our users through social media.</p>
-  <p><img src="media/image9.png" width="622" height="434" /></p>
+  <p><img src="images/case_study/two.png" /></p>
 </div>
 {% endblock %}

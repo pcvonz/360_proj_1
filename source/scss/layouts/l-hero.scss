@@ -1,0 +1,49 @@
+.l-hero {
+  @include span(12 of 12);
+  height: 300px;
+  position: relative;
+  bottom: 6.4em;
+  @include breakpoint($tablet) {
+    height: 500px;
+  }
+  width: 100%;
+  background-image: url("../images/background.png");
+  #svg {
+    width: 100%;
+    height: 100%;
+  }
+  .box{
+    width: (1/16)*100%;
+    float: left;
+    height: 100px;
+  }
+  margin-bottom: -4em;
+  @include breakpoint($tablet){ 
+    margin-bottom: 2em;
+  }
+  @include breakpoint($desktop){ 
+    margin-bottom: 2em;
+  }
+}
+
+#header-text{
+  position: relative;
+  height: 2em;
+  bottom: 16em;
+  @include breakpoint($tablet) {
+    bottom: 22em;
+  }
+  h1 {
+    color: white;
+    text-align: center;
+  }
+  h2 {
+    color: white;
+    text-align: center;
+  }
+}
+#work {
+  width: 100%;
+  position: relative;
+  bottom: 4.5em;
+}
