@@ -12,42 +12,47 @@ function initialize_boxes(width, height) {
   } 
 }
 
-var idle = true;
+var idle = false;
 var idle_vec = new Victor(1, 0);
 
 
 function idle_anim(pos_x, pos_y, boxes) {
-  if (idle == true) {
-    var move = new Victor(50, 0);
-    idle_vec.add(move);
-    console.log(idle_vec);
-    add_item(idle_vec);
-  }
+  //if (idle == true) {
+  //  var move = new Victor(50, 0);
+  //  idle_vec.add(move);
+  //  console.log(idle_vec);
+  //  add_item(idle_vec);
+  //}
+  console.log(array.length);
   setTimeout(function() {
     if (array.length > 1) {
       var item = array.shift();
-    } else {
-      var item = {"x": 0, "y": 0};
-    }
       idle_wait(item.x, item.y, boxes);
-    }, 500);
+    } else if(array.length == 1) {
+      var item = array[0];
+      idle_wait(item.x, item.y, boxes);
+    }
+      idle_wait(null, null, boxes);
+    }, 100);
 }
 
-var array = []
+var array = [new Victor(0,0), new Victor(0,0)]
 
 function idle_wait(pos_x, pos_y, boxes) {
+    if(pos_x != null) {
       for(var item of boxes) {
         time = Date.now()
         calculate_fill(pos_x, pos_y, item);
       }
+    }
     idle_anim(pos_x, pos_y, boxes);
 }
 
 
 header_container.addEventListener("mouseleave", function(e) {
   idle = true;
-  
 });
+
 header_container.addEventListener("mousemove", function(e) {
     idle = false
     var item = new Victor(e.clientX, e.clientY);
@@ -82,3 +87,6 @@ function calculate_fill(pos_x, pos_y, el) {
 }
 initialize_boxes(15,15);
 idle_anim(0, 0, boxes, 10);
+for(var item of boxes) {
+  calculate_fill(0,0, item);
+};
