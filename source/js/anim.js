@@ -13,9 +13,16 @@ function initialize_boxes(width, height) {
 }
 
 var idle = true;
+var idle_vec = new Victor(1, 0);
 
 
 function idle_anim(pos_x, pos_y, boxes) {
+  if (idle == true) {
+    var move = new Victor(50, 0);
+    idle_vec.add(move);
+    console.log(idle_vec);
+    add_item(idle_vec);
+  }
   setTimeout(function() {
     if (array.length > 1) {
       var item = array.shift();
@@ -23,18 +30,16 @@ function idle_anim(pos_x, pos_y, boxes) {
       var item = {"x": 0, "y": 0};
     }
       idle_wait(item.x, item.y, boxes);
-    }, 1);
+    }, 500);
 }
 
 var array = []
 
 function idle_wait(pos_x, pos_y, boxes) {
-    if (pos_x) {
       for(var item of boxes) {
         time = Date.now()
         calculate_fill(pos_x, pos_y, item);
       }
-    }
     idle_anim(pos_x, pos_y, boxes);
 }
 
