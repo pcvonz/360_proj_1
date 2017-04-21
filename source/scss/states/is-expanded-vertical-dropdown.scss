@@ -6,7 +6,6 @@
     @include breakpoint($tablet) {
 		height: initial;
         overflow: hidden;
-        padding: 1.2em 0 1.2em 0;
         overflow: visible;
     }
 }
