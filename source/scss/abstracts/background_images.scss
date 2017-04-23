@@ -1,24 +1,43 @@
+
 .hit-and-bun {
-  background-image: url("../images/HitandBun_logo.svg");
+  background-image: url("../images/hit_and_bun.png");
   background-repeat: no-repeat;
   background-position: center center;
+  background-size: cover;
+  background-color: $hit-and-bun-color;
 }
 
 .faxian {
   background-image: url("../images/faxian.png");
   background-repeat: no-repeat;
   background-position: center center;
+  background-size: cover;
+  background-color: $faxian-color;
 }
 
 .hab_pom {
-  background-image: url("../images/pom_1.png");
+  background-image: url("../images/secutor.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  background-color: $secutor-color;
+  background-size: cover;
 }
-
+.ur-styleguide-color {
+  background-color: $ur-styleguide-color;
+}
 .ur-styleguide {
   background-image: url("../images/ur_guide_1.png");
   background-repeat: no-repeat;
+  background-position: center center;
   background-size: contain;
+  background-color: $ur-styleguide-color;
+}
+
+.townie {
+  background-image: url("../images/townie.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  background-color: $townie-color;
 }

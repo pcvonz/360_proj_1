@@ -10,32 +10,46 @@
     transition: background-color .5s, color .5s;
   }
   margin-bottom: 2em;
+  transition: filter .2s;
 }   
 
 .anim-badge:hover {
+  filter: brightness(118%);
   .badge-content {
-    background-color: transparentize($primary-color, .2);
     color: white;
-
+    background-color: black;
+    p, h2 {
+      color: white;
+    }
+    h2 {
+      font-weight: 800;
+    }
   }
 }
 
 .badge-content {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    display: inline-block;
-    text-align: center;
-    background-color: transparentize($primary-color, 1);
+  position: absolute;
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  background-color: transparentize($primary-color, 1);
+  height: auto;
+  bottom: 0;
+  p, h2 {
     color: transparentize($primary-color, 1);
-    height: 100%;
-    h2 {
-      font-size: 1.1em;
-      text-transform: uppercase;
-    }
+  }
+  h2 {
+    font-size: 1.1em;
+    text-transform: uppercase;
+  }
 }
 
 .highlight {
     background-color: $primary-color;
 }
 
+.content-subhead {
+  text-transform: uppercase;
+  font-size: .6em;
+  font-weight: 800;
+}

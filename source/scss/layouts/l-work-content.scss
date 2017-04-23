@@ -26,14 +26,24 @@
       @include gallery(4 of 12);
     }
   }
-  .clients {
-    margin: 2em 0;
-    background-color: $secondary-color;;
+  .content-fullwidth {
+    width: 100vw;
+    margin-left: -34%;
+    background-color: $ur-styleguide-color;
+    padding: 1em 8em;
+    
+    p, h3 {
+      color: white;
+    }
+
+  }
+  .gallery {
+    height: 55%;
     color: white;
-    @include span(12 of 12);
     div {
     padding: 2em;
       @include gallery(4 of 12);
     }
   }
 }
+

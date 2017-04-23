@@ -1,4 +1,5 @@
 //Grab important dom elements
+var Victor = require("victor");
 var header_container = document.getElementById("header_container");
 var header_text = document.getElementById("header-text");
 
@@ -15,7 +16,7 @@ var array = [new Victor(0,0), new Victor(0,0)]
 //idle params
 var idle = true;
 var idle_vec = new Victor(1, 0);
-var SPEED = width / 80;
+var SPEED = calc_speed(width);
 var move = new Victor(SPEED, 0);
 
 function initialize_boxes(width, height) {
@@ -34,12 +35,15 @@ function getRandomArbitrary(min, max) {
 //If the mouse isn't in the header area and isn't moving, start idling
 function idle_anim(pos_x, pos_y, boxes) {
   if (idle == true) {
-    if(idle_vec.x >= header_container.offsetWidth+100 || idle_vec.x < -1) {
+    if(idle_vec.x >= header_container.offsetWidth+10 || idle_vec.x < -1) {
       move = move.invert();
       move.y = getRandomArbitrary(-SPEED, SPEED);
     }
-    if(idle_vec.y >= header_container.offsetHeight || idle_vec.y < 0) {
-      move.y = getRandomArbitrary(-SPEED, SPEED);
+    if(idle_vec.y >= header_container.offsetHeight+10) {
+      move.y = getRandomArbitrary(-SPEED, -1);
+      console.log("hello");
+    } else if(idle_vec.y < 0) {
+      move.y = getRandomArbitrary(1, SPEED);
     }
     idle_vec.add(move);
     add_item(idle_vec);
@@ -54,7 +58,7 @@ function idle_anim(pos_x, pos_y, boxes) {
     } else{
       idle_wait(null, null, boxes);
     }
-    }, 30);
+    }, 1);
 }
 
 function idle_wait(pos_x, pos_y, boxes) {
@@ -67,10 +71,14 @@ function idle_wait(pos_x, pos_y, boxes) {
     idle_anim(pos_x, pos_y, boxes);
 }
 
+function calc_speed(width) {
+  return width / 280;
+}
+
 //Adjust the speed of the circle on resize
 window.onresize = function(event) {
   idle_vec = new Victor(1, 0);
-  SPEED = width / 60;
+  SPEED = calc_speed(header_container.offsetWidth);
   move = new Victor(SPEED, 0);
 };
 

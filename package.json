@@ -4,6 +4,7 @@
   "main": "index.js",
   "dependencies": {
     "breakpoint-sass": "^2.7.1",
+    "gulp-browserify": "^0.5.1",
     "nodemon": "^1.11.0",
     "susy": "^2.2.12"
   },
