@@ -1,15 +1,39 @@
 footer {
-    float: right;
+  ul {
+    display: flex;
+    padding: 0;
+    height: 8em;
     clear: both;
     background-color: $ternary-color;
     width: 100%;
-    .nav-item{
-       p {
-            line-height: 10px;
-            color: white;
-         }
-       margin-right: 1.2em;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    img {
+      height: 1.2em;
     }
+    img:hover {
+      filter: brightness(80%);
+    }
+    li {
+        a {
+         text-decoration: none;
+        p {
+           line-height: 10px;
+           color: white;
+          }
+       }
+    }
+
+    @include breakpoint($tablet){ 
+      padding-right: 1em;
+      justify-content: flex-end;
+      li {
+        padding: 0 .3em 0 .3em; 
+      }
+    }
+  }
 }
 
 

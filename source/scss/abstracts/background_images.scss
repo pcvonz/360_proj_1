@@ -3,7 +3,7 @@
   background-image: url("../images/hit_and_bun.png");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
+  background-size: contain;
   background-color: $hit-and-bun-color;
 }
 
@@ -11,17 +11,16 @@
   background-image: url("../images/faxian.png");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
+  background-size: contain;
   background-color: $faxian-color;
 }
 
-.hab_pom {
+.secutor {
   background-image: url("../images/secutor.png");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
   background-color: $secutor-color;
-  background-size: cover;
+  background-size: contain;
 }
 .ur-styleguide-color {
   background-color: $ur-styleguide-color;

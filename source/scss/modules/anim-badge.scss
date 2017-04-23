@@ -1,4 +1,9 @@
 .anim-badge {
+  a {
+    height: 100%;
+    width: 100%;
+    display: block;
+  }
   height: 300px;
   position: relative;
   overflow: hidden;
@@ -7,7 +12,7 @@
   }
   z-index: 0;
   .badge-content {
-    transition: background-color .5s, color .5s;
+    transition: background-color .2s, color .2s;
   }
   margin-bottom: 2em;
   transition: filter .2s;
