@@ -1,0 +1,9 @@
+.mockups {
+  @include breakpoint(522px) {
+    @include span(12 of 12);
+    img{
+      @include gallery(6 of 12);
+    }
+  }
+
+}

@@ -26,5 +26,24 @@
       @include gallery(4 of 12);
     }
   }
+  .web-link {
+    width: 100%;
+    height: 4em;
+    @include span(12 of 12);
+    text-align: right;
+    a {
+      color: white;
+      text-transform: uppercase;
+      font-weight: 800;
+      height: 100%;
+      width: 100%;
+      display: block;
+      padding-top: 1.3em;
+      padding-right: 1em;
+    }
+    a:after {
+      content:"▶";
+    }
+  }
 }
 

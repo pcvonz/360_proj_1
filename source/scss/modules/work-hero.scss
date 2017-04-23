@@ -1,6 +1,10 @@
 .work-hero {
+  margin-top: -8em;
   height: 400px;
   @include span(12 of 12);
   background-position: center center;
   margin-bottom: 3em;
+  @include breakpoint($tablet) {
+    margin-top: -3em;;
+  }
 }
