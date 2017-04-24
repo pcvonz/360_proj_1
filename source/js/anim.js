@@ -41,7 +41,6 @@ function idle_anim(pos_x, pos_y, boxes) {
     }
     if(idle_vec.y >= header_container.offsetHeight+10) {
       move.y = getRandomArbitrary(-SPEED, -1);
-      console.log("hello");
     } else if(idle_vec.y < 0) {
       move.y = getRandomArbitrary(1, SPEED);
     }
@@ -123,13 +122,26 @@ function calculate_fill(pos_x, pos_y, el) {
   var width = header_container.offsetWidth;
   var vec1 = new Victor(pos_x, pos_y);
   var vec2 = new Victor(el.getBoundingClientRect().x,el.getBoundingClientRect().y);
-  var dist = (vec2.distance(vec1) / width) * 255;
-  el.style.background = "rgb(" +  dist + ", " + dist/8+100 + ", 100)";
+  var dist = (vec2.distance(vec1) / width) * 350;
+  el.style.background = rgbToHex(dist, dist/8+100, 100);
+  console.log(el.style.background);
 }
 
-initialize_boxes(15,15);
+initialize_boxes(6,6);
 idle_anim(0, 0, boxes, 10);
 
 for(var item of boxes) {
   calculate_fill(0,0, item);
 };
+
+function componentToHex(c) {
+  c = c.toString(16);
+  return c.length == 1 ? "0" + c : c;
+}
+
+function rgbToHex(r, g, b) {
+ r = componentToHex(parseInt(r)); 
+ g = componentToHex(parseInt(g)); 
+ b = componentToHex(parseInt(b)); 
+ return "#" + r + g + b;
+}

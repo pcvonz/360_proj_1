@@ -15,7 +15,7 @@ nav {
     @include container(4 center);
     padding: 1.2em 0 1.2 0;
     @include breakpoint($tablet) {
-        background-color: #FFFFFFE6;
+        background-color: transparentize(#FFFFFF, .1);
         @include container(6 left);
         text-align: left;
         height: 3.6em;

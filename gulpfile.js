@@ -1,9 +1,15 @@
+'use strict';
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var browserSync = require('browser-sync').create();
 var nunjucks = require('gulp-nunjucks');
 var imagemin = require('gulp-imagemin');
-var browserify = require('gulp-browserify');
+var browserify = require('browserify');
+var source = require('vinyl-source-stream');
+var buffer = require('vinyl-buffer');
+var gutil = require('gulp-util');
+var uglify = require('gulp-uglify');
+var sourcemaps = require('gulp-sourcemaps');
 
 
 //TODO:
@@ -27,14 +33,28 @@ gulp.task('images', function() {
                                        .pipe(gulp.dest('public/images'))
 
 });
-gulp.task('js', function() {
-    return gulp.src('source/js/app.js')
-               .pipe(browserify({
-                insertGlobals: true,
-                debug : !gulp.env.production
-               }))
-               .pipe(gulp.dest('public/js'))
-});
+
+
+gulp.task('js', function () {
+  // set up the browserify instance on a task basis
+  var b = browserify({
+    entries: './source/js/app.js',
+    debug: true
+  });
+
+  return b.bundle()
+    .pipe(source('./app.js'))
+    .pipe(gulp.dest('./public/js/'));
+})
+
+//gulp.task('js', function() {
+//    return gulp.src('source/js/app.js')
+//               .pipe(browserify({
+//                insertGlobals: true,
+//                debug : !gulp.env.production
+//               }))
+//               .pipe(gulp.dest('public/js'))
+//});
 
 gulp.task('sass', function(){
     return gulp.src('source/style.scss')
@@ -63,7 +83,7 @@ gulp.task('browserSync', function() {
 //that means that we want to run the browser sync task first
 //and then watch for file changers
 gulp.task('watch', ['nunjucks', 'sass', 'images', 'js', 'browserSync'], function() {
-    gulp.watch('source/scss/**/*.scss', ['sass']);
+    gulp.watch('source/scss/**/*.scss', ['sass', browserSync.reload]);
     gulp.watch('templates/**/*.html', ['nunjucks']);
     gulp.watch('source/js/**/*.js', ['js', browserSync.reload]);
     gulp.watch('source/images/**/*.+(png|jpg|gif|svg)', ['images', browserSync.reload]);
