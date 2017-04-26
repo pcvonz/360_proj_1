@@ -122,9 +122,8 @@ function calculate_fill(pos_x, pos_y, el) {
   var width = header_container.offsetWidth;
   var vec1 = new Victor(pos_x, pos_y);
   var vec2 = new Victor(el.getBoundingClientRect().x,el.getBoundingClientRect().y);
-  var dist = (vec2.distance(vec1) / width) * 350;
-  el.style.background = rgbToHex(dist, dist/8+100, 100);
-  console.log(el.style.background);
+  var dist = (vec2.distance(vec1) / width) * 155;
+  el.style.background = rgbToHex(dist+100, dist/8, 100);
 }
 
 initialize_boxes(6,6);
