@@ -28,7 +28,7 @@ gulp.task('nunjucks', function () {
 
 //Function to optimize images (not really utilized)
 gulp.task('images', function() {
-    return gulp.src('source/images/**/*.+(png|jpg|gif|svg)')
+    return gulp.src('source/images/**/*.+(png|jpg|gif)')
                                        .pipe(imagemin())
                                        .pipe(gulp.dest('public/images'))
 

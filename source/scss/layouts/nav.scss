@@ -1,4 +1,10 @@
 nav {
+
+    img {
+      display: inline-block;
+      float: left;
+      height: 1.2em;
+    }
     position: fixed;
     z-index: 1;
     top: 0;
