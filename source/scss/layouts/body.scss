@@ -1,21 +1,16 @@
-a:visited {
-    color: $gray;
-}
-
 hr {
     margin: 0;
 }
 
  body {
+   height: 100%;
    position: relative;
    top: 5em;
    background-color: white;
-   padding: 10;
    color: $dark-gray;
    margin: 0;
    padding: 0;
    font-family: 'Fira Sans', sans-serif;
-   min-height: 600px;
  } 
 
 .l-hero {

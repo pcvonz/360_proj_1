@@ -1,8 +1,9 @@
 .l-hero {
   @include span(12 of 12);
-  height: 300px;
+  height: 100vh;
   position: relative;
   bottom: 6.4em;
+  min-height: 32em;
   @include breakpoint($tablet) {
     height: 90vh;
   }
@@ -30,18 +31,18 @@
 #header-text{
   position: relative;
   height: 2em;
-  bottom: 16em;
+  bottom: 27em;
+  text-align: center;
   @include breakpoint($tablet) {
-    bottom: 22em;
+    bottom: 28em;
   }
-  h1 {
+  h1, h2{
     color: white;
-    text-align: center;
   }
-  h2 {
-    color: white;
-    text-align: center;
+  img {
+    margin: 0 auto;
   }
+
 }
 #work {
   width: 100%;

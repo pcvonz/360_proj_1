@@ -71,7 +71,7 @@ function idle_wait(pos_x, pos_y, boxes) {
 }
 
 function calc_speed(width) {
-  return width / 280;
+  return width / 380;
 }
 
 //Adjust the speed of the circle on resize
@@ -124,10 +124,9 @@ function calculate_fill(pos_x, pos_y, el) {
   var vec2 = new Victor(el.getBoundingClientRect().x,el.getBoundingClientRect().y);
   var dist = (vec2.distance(vec1) / width) * 150;
   el.style.background = rgbToHex(dist+10, dist/8, 90);
-  console.log(el.style.background);
 }
 
-initialize_boxes(6,6);
+initialize_boxes(4,4);
 idle_anim(0, 0, boxes, 10);
 
 for(var item of boxes) {

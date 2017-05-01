@@ -1,6 +1,11 @@
 
 .about {
-    @include container(8);
+  @include container(8 center 90%);
+  min-height: 100%;
+  p {
+    margin-top: 2em;
+    text-align: left;
+  }
 }
 @include breakpoint($tablet) {
     .about {

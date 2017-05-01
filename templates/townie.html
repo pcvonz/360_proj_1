@@ -4,9 +4,23 @@
 <div class="work-hero townie">
 </div>
 <div class="l-work-content">
-  <h1> AC Player </h1>
+  <h1> Townie </h1>
   <h2> The brief </h2>
-  <h2> Research </h2>
+    <p> Townie is a radio that plays songs based on the time of day and the weather. </p>
   <h2> Implementation </h2>
+    <p> 
+      The Townie backend was implemented in Python using the flask micro web framework. 
+      The frontend was done with Gulp as a task runner, the RiotJS UI library, and SASS as my preprocessor.
+      I used a few of my go to SASS libraries: Susy for the grid and Breakpoint for 
+      media queries.
+    </p>
+    <p>
+      There were a few technical hurdles to overcome. The device needs to connect to 
+      a WiFi network so I had to figure out a way to provide an interface to enter
+      a password for the WiFi network. The micro computer I used (C.H.I.P.) has a 
+      WiFi card built in and is capable of both creating an access point and connecting
+      to one at the same time. When the device is powered on it broadcasts a WiFi network,
+      which allows access to the web interface. From there they can connect Townie to their network.
+    </p>
 </div>
 {% endblock %}
