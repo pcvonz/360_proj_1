@@ -1,7 +1,8 @@
 
 .about {
+  position: relative;
+  margin-bottom: 10em;
   @include container(8 center 90%);
-  min-height: 100%;
   p {
     margin-top: 2em;
     text-align: left;
@@ -10,6 +11,8 @@
 @include breakpoint($tablet) {
     .about {
         @include container(12 center 50%);
+        top: 10em;
+        margin-bottom: 30em;
     }
 }
 

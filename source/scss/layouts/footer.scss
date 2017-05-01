@@ -1,4 +1,9 @@
 footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  width: 100%;
   ul {
     margin-bottom: 0;
     display: flex;
@@ -18,6 +23,7 @@ footer {
       filter: brightness(80%);
     }
     li {
+      padding: 0 .5em;
         a {
          text-decoration: none;
         p {

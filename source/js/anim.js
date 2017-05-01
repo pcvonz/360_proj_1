@@ -62,9 +62,9 @@ function idle_anim(pos_x, pos_y, boxes) {
 
 function idle_wait(pos_x, pos_y, boxes) {
     if(pos_x != null) {
-      for(var item of boxes) {
+      for(i= 0; i< boxes.length; i++) {
         time = Date.now()
-        calculate_fill(pos_x, pos_y, item);
+        calculate_fill(pos_x, pos_y, boxes[i]);
       }
     }
     idle_anim(pos_x, pos_y, boxes);
@@ -121,7 +121,7 @@ function add_item(item) {
 function calculate_fill(pos_x, pos_y, el) {
   var width = header_container.offsetWidth;
   var vec1 = new Victor(pos_x, pos_y);
-  var vec2 = new Victor(el.getBoundingClientRect().x,el.getBoundingClientRect().y);
+  var vec2 = new Victor(el.getBoundingClientRect().top, el.getBoundingClientRect().left);
   var dist = (vec2.distance(vec1) / width) * 150;
   el.style.background = rgbToHex(dist+10, dist/8, 90);
 }
@@ -129,8 +129,8 @@ function calculate_fill(pos_x, pos_y, el) {
 initialize_boxes(4,4);
 idle_anim(0, 0, boxes, 10);
 
-for(var item of boxes) {
-  calculate_fill(0,0, item);
+for(i = 0; i < boxes.length; i++) {
+  calculate_fill(0,0, boxes[i]);
 };
 
 function componentToHex(c) {
