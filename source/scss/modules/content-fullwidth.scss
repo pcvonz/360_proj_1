@@ -7,13 +7,7 @@
     color: white;
   }
   @include breakpoint($tablet) {
-    width: 100vw;
-    margin-left: -12.5%;
     flex-direction: row;
-  }
-  @include breakpoint($desktop) {
-    padding: 1em 8em;
-    margin-left: -34%;
   }
 
 }

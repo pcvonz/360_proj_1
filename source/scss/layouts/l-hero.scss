@@ -33,6 +33,19 @@
   height: 2em;
   bottom: 27em;
   text-align: center;
+  svg {
+    width: 300px;
+    height: 300px;
+    font-family: "Fira Sans", sans-serif;
+    #g63032 {
+      fill: none;
+      stroke: white;
+    }
+    #g63056 {
+      fill: white;
+      stroke: white;
+    }
+  }
   @include breakpoint($tablet) {
     bottom: 28em;
   }

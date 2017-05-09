@@ -16,6 +16,11 @@ var sourcemaps = require('gulp-sourcemaps');
 //Implement the optimze functions from Zell's tutorial
 //https://css-tricks.com/gulp-for-beginners/
 
+gulp.task('assets', function() {
+  gulp.src('source/assets/*')
+                           .pipe(gulp.dest('public/assets'))
+});
+
 gulp.task('nunjucks', function () {
     gulp.src('templates/*.html')
         .pipe(nunjucks.compile({name: 'Test'}))
@@ -84,9 +89,10 @@ gulp.task('browserSync', function() {
 //We put browser sync in an array as the second argument
 //that means that we want to run the browser sync task first
 //and then watch for file changers
-gulp.task('watch', ['nunjucks', 'sass', 'images', 'js', 'browserSync'], function() {
+gulp.task('watch', ['assets', 'nunjucks', 'sass', 'images', 'js', 'browserSync'], function() {
     gulp.watch('source/scss/**/*.scss', ['sass', browserSync.reload]);
     gulp.watch('templates/**/*.html', ['nunjucks']);
     gulp.watch('source/js/**/*.js', ['js', browserSync.reload]);
     gulp.watch('source/images/**/*.+(png|jpg|gif|svg)', ['images', browserSync.reload]);
+    gulp.watch('source/assets/*)', ['assets', browserSync.reload]);
 });
